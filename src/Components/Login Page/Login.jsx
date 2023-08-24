@@ -1,6 +1,6 @@
 import React from 'react'
 
-import LoginNav from '../Navbar/LoginNav'
+import LoginNav from './LoginNav'
 
 const Login = () => {
   return (

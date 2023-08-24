@@ -1,16 +1,26 @@
 import React from "react";
 import './App.css';
-import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
 
+// import routes
+import { Routes, Route } from "react-router-dom";
+
+// import components
 import Login from "./Components/Login Page/Login";
 import Footer from "./Components/Navbar/Footer";
 
+// import pages
+import Register from "./Components/Register Page/Register";
+
+
 function App() {
   return (
-    <Router>
-          <Login />
-        <Footer />
-    </Router>
+    <>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
+    <Footer />
+    </>
   );
 }
 
