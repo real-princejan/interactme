@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Interact Me
 
 "Interact Me" is a web application designed to assess questionnaires for individuals with mental health issues. The primary goal of this app is to provide a user-friendly and accessible platform for individuals to complete mental health questionnaires and assessments, which can then be used to gather valuable insights into their mental well-being.
 
