@@ -1,8 +1,16 @@
 import React from 'react'
 
+import RegisterNav from './RegisterNav'
+import RegisterPage from './RegisterPage'
+
 const Register = () => {
   return (
-    <div>Register</div>
+    <> 
+    <RegisterNav />
+    <div className="min-h-full">
+    <RegisterPage />
+    </div>
+  </>
   )
 }
 

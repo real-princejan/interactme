@@ -1,25 +1,36 @@
 import React from "react";
 import './App.css';
+import { useEffect } from "react";
+import Aos from "aos";
 
 // import routes
 import { Routes, Route } from "react-router-dom";
 
 // import components
-import Login from "./Components/Login Page/Login";
-import Footer from "./Components/Navbar/Footer";
+import Header from "./Components/Header-Footer/Header"
+import Footer from "./Components/Header-Footer/Footer";
 
 // import pages
+import Login from "./Components/Login Page/Login";
 import Register from "./Components/Register Page/Register";
+import HomePage from "./Components/Home/HomePage";
 
 
 function App() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+  
   return (
     <>
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-    </Routes>
-    <Footer />
+    <div className="max-w-[1080px] mx-auto">
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/homepage" element={<HomePage />} />
+      </Routes>
+    </div>
+
     </>
   );
 }
