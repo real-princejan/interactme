@@ -7,8 +7,6 @@ import Aos from "aos";
 import { Routes, Route } from "react-router-dom";
 
 // import components
-import Header from "./Components/Header-Footer/Header"
-import Footer from "./Components/Header-Footer/Footer";
 
 // import pages
 import Login from "./Components/Login Page/Login";
@@ -25,7 +23,7 @@ function App() {
     <>
     <div className="max-w-[1080px] mx-auto">
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/homepage" element={<HomePage />} />
       </Routes>

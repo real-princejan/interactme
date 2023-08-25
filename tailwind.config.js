@@ -11,6 +11,7 @@ module.exports = {
         blackColor: "#0b0c10",
         signColor: "#4F555A",
         insideColor: "#EBF4FF",
+        bgColor: "#F6F6F6",
       },
     },
   },

@@ -15,7 +15,7 @@ const RegisterPage = () => {
                 <h1 className='font-[800] text-4xl'>
                     <span>Embrace your journey towards well-being.</span>
                 </h1>
-                <p className='font-[700]'>if you don’t an account <br/> you can <Link className='text-greenColor hover:animate-pulse' to='/Register'>Register Here!</Link></p>
+                <p className='font-[700]'>already have a account <br/> you can <Link className='text-greenColor hover:animate-pulse' to='/login'>Login Here!</Link></p>
             </div>
 
             {/* Image */}
