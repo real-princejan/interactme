@@ -12,6 +12,8 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Components/Login Page/Login";
 import Register from "./Components/Register Page/Register";
 import HomePage from "./Components/Home/HomePage";
+import MentalCheckIn from "./Components/Activities/mentalcheckin";
+import Guide from "./Components/Guides/Guide";
 
 
 function App() {
@@ -23,9 +25,11 @@ function App() {
     <>
     <div className="max-w-[1080px] mx-auto">
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/homepage" element={<HomePage />} />
+        <Route path="/checkin" element={<MentalCheckIn />} />
+        <Route path="/guide" element={<Guide />} />
       </Routes>
     </div>
 

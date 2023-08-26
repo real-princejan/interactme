@@ -1,10 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // import link
-import { Link, useSearchParams } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 // import images
 import intLOGO from '../../assets/images/interactlogo.SVG'
 // import components
+
+const navLink = [
+  {
+    path:'/homepage',
+    display:'Home',
+  },
+  {
+    path:'/about',
+    display:'About',
+  },
+  {
+    path:'/checkin',
+    display:'Activities',
+  },
+  {
+    path:'/contact',
+    display:'Contact',
+  },
+]
 
 
 
@@ -23,10 +42,13 @@ const Header = () => {
             {/* Navbar */}
             <div className="hidden md:flex items-center">
                 <ul className='flex gap-6 font-[600] text-sm'>
-                  <Link className='hover:text-greenColor' to='/'>Home</Link>
-                  <Link className='hover:text-greenColor' to='/'>About</Link>
-                  <Link className='hover:text-greenColor' to='/'>Activities</Link>
-                  <Link className='hover:text-greenColor' to='/'>Contact</Link>
+                  {
+                    navLink.map((link,index) => 
+                    <li key={index}>
+                      <NavLink to={link.path} className={navClass => navClass.isActive ? 'text-greenColor':'hover:text-softColor'}>{link.display}</NavLink>
+                    </li>
+                    )
+                  }
                 </ul>
             </div>
 
@@ -49,10 +71,13 @@ const Header = () => {
               {/* Mobile Responsive view 2 */}
         <div className={toggle?'absolute z-10 p-4 w-full px-8 md:hidden':'hidden'}>
             <ul className='flex gap-6 font-[600] text-sm'>
-                <Link className='hover:text-greenColor p-4' to='/'>Home</Link>
-                <Link className='hover:text-greenColor p-4' to='/'>About</Link>
-                <Link className='hover:text-greenColor p-4' to='/'>Activities</Link>
-                <Link className='hover:text-greenColor p-4' to='/'>Contact</Link>
+            {
+                    navLink.map((link,index) => 
+                    <li key={index}>
+                      <NavLink to={link.path} className={navClass => navClass.isActive ? 'text-greenColor':'hover:text-softColor'}>{link.display}</NavLink>
+                    </li>
+                    )
+                  }
 
                 <div className="flex flex-col my-4 gap-4 items-center justify-center text-greenColor">
                   <p className='flex justify-between items-center px-6 gap-2'><i class="ri-user-5-line" /> Joaquin Burdado</p>

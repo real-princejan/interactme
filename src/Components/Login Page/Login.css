@@ -19,13 +19,3 @@ body {
 	50% { transform: translate(0, 15px); }
 	100% { transform: translate(0, -0px); }
 }
-
-/* .rectangle1 {
-	width: 400px;
-	height: 60px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-  border-radius: 10px;
-} */
