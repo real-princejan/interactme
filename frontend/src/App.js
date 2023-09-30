@@ -28,9 +28,9 @@ function App() {
     <>
       <div className="max-w-[1080px] mx-auto">
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/quiz" element={<Quiz />} />
