@@ -6,12 +6,5 @@ import App from "./App";
 import "remixicon/fonts/remixicon.css";
 import "aos/dist/aos.css";
 
-// import router
-import { BrowserRouter as Router } from "react-router-dom";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <Router>
-    <App />
-  </Router>
-);
+root.render(<App />);

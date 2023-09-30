@@ -2,13 +2,12 @@ import React from "react";
 import "./App.css";
 import { useEffect } from "react";
 import Aos from "aos";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-// import routes
-import { Routes, Route } from "react-router-dom";
+// Routing
+import PrivateRoute from "./routing/PrivateRoute";
 
-// import components
-
-// import pages
+// Import components
 import Login from "./Components/Login Page/Login";
 import Register from "./Components/Register Page/Register";
 import HomePage from "./Components/Home/HomePage";
@@ -25,10 +24,10 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div className="max-w-[1080px] mx-auto">
+    <div className="max-w-[1080px] mx-auto">
+      <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <PrivateRoute path="/" component={HomePage} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
@@ -38,8 +37,8 @@ function App() {
           <Route path="/question" element={<Question />} />
           <Route path="/guide" element={<Guide />} />
         </Routes>
-      </div>
-    </>
+      </Router>
+    </div>
   );
 }
 
